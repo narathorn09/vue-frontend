@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import TableView from "../views/TableView.vue";
+import TableStudent from "../views/TableStudentView.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/managetable",
     name: "managetable",
     component: TableView,
+  },
+  {
+    path: "/manageBackend",
+    name: "manageBackend",
+    component: TableStudent,
   },
 ];
 

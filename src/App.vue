@@ -23,6 +23,7 @@
 
       <v-spacer></v-spacer>
 
+      <v-btn text @click="gotoManageBackend()"> Connect Backend </v-btn>
       <v-btn text @click="gotoManage()"> หน้าจัดการข้อมูล </v-btn>
 
       <v-btn @click="goToLogin()" text> เข้าสู่ระบบ </v-btn>
@@ -43,6 +44,9 @@ export default {
   }),
 
   methods: {
+    gotoManageBackend() {
+      this.$router.push({ path: "/manageBackend" }).catch(() => {});
+    },
     goToLogin() {
       this.$router.push({ path: "/login" }).catch(() => {});
     },
